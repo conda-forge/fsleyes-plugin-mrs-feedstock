@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,10 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - fsleyes
+    - fsleyes >=1.0.10,<2.0
+    - fsleyes-widgets >=0.16.0,<1.0
+    - file-tree >=1.6.1,<2.0
+    - seaborn >=0.12.0,<1.0
 
 test:
   requires:
