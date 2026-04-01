@@ -1,5 +1,5 @@
 {% set name = "fsleyes-plugin-mrs" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: bec8444dc37eb0073ca260616ba07f33ce783bf0a02cce3f9641b8aeb1781f12
+  sha256: dec8a6cd5b424d757f61500a36486167e26a3879db9055da219263437bed7091
 
 build:
   noarch: python
