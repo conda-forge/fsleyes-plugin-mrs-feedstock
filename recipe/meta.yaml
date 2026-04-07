@@ -26,7 +26,7 @@ requirements:
     - fsleyes-props >=1.12,<2.0
     - fslpy >=3.9,<4.0
     - file-tree >=1.6.1,<2.0
-    - matplotlib >=3.5,<4.0
+    - matplotlib-base >=3.5,<4.0
     - nifti-mrs >=1.3.2,<2.0
     - numpy >=1.14,<3.0
     - seaborn >=0.12.0,<1.0
