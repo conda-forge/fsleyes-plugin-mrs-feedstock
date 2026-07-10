@@ -21,14 +21,14 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - fsleyes >=1.17.0,<2.0
-    - fsleyes-widgets >=0.16.0,<1.0
-    - fsleyes-props >=1.12,<2.0
+    - fsleyes >=1.19.0,<2.0
+    - fsleyes-widgets >=0.17.0,<1.0
+    - fsleyes-props >=1.13,<2.0
     - fslpy >=3.9,<4.0
     - file-tree >=1.6.1,<2.0
-    - matplotlib-base >=3.5,<4.0
-    - nifti-mrs >=1.3.2,<2.0
-    - numpy >=1.14,<3.0
+    - matplotlib-base >=3.10,<4.0
+    - nifti-mrs >=1.4.1,<2.0
+    - numpy >=1.26,<3.0
     - seaborn >=0.12.0,<1.0
     - wxpython >=4,<5.0
 
