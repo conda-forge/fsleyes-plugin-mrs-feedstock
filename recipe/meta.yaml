@@ -1,6 +1,6 @@
 {% set name = "fsleyes-plugin-mrs" %}
 {% set version = "0.1.13" %}
-{% set pyproject = load_file_data("../pyproject.toml") %}
+{% set pyproject = load_file_data("pyproject.toml") %}
 {% set deps = pyproject["project"]["dependencies"] %}
 
 package:
