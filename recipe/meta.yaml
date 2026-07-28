@@ -1,5 +1,7 @@
 {% set name = "fsleyes-plugin-mrs" %}
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
+{% set pyproject = load_file_data("../pyproject.toml") %}
+{% set deps = pyproject["project"]["dependencies"] %}
 
 package:
   name: {{ name|lower }}
@@ -19,18 +21,16 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
-    - fsleyes >=1.19.0,<2.0
-    - fsleyes-widgets >=0.17.0,<1.0
-    - fsleyes-props >=1.13,<2.0
-    - fslpy >=3.9,<4.0
-    - file-tree >=1.6.1,<2.0
-    - matplotlib-base >=3.10,<4.0
-    - nifti-mrs >=1.4.1,<2.0
-    - numpy >=1.26,<3.0
-    - seaborn >=0.12.0,<1.0
-    - wxpython >=4,<5.0
+    {% for package in deps %}
+    {% if package.startswith("matplotlib") %}
+    - {{ package.replace("matplotlib", "matplotlib-base", 1) }}
+    {% else %}
+    - {{ package }}
+    {% endif %}
+    {% endfor %}
 
 test:
   requires:
